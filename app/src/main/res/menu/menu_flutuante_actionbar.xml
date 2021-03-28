@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_disquete"
+        android:title="@string/salvar"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/itemMenu_LerCupomFiscal"
+        android:title="@string/ler_cupom_fiscal"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/itemMenu_DespesaCartao"
+        android:title="@string/despesa_cartao"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/itemMenu_GerenciarCategorias"
+        android:title="@string/gerenciar_categorias"
+        app:showAsAction="never"/>
+
+
+</menu>
+
