@@ -16,6 +16,10 @@
     <string name="horario">horario</string>
     <string name="data_de_pagamento">Data de Pagamento</string>
     <string name="legenda_observacoes">Você também pode colocar hashtags aqui (ex: #almoço) e usar isso nas pesquisas como listagens e extrato.</string>
+    <string name="salvar">Salvar</string>
+    <string name="ler_cupom_fiscal">Ler cupom fiscal</string>
+    <string name="despesa_cartao">Despesa cartão</string>
+    <string name="gerenciar_categorias">Gerenciar categorias</string>
 
     <string-array name="stringArray_recorrencia">
         <item>Nenhuma</item>

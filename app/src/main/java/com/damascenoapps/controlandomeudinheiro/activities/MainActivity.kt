@@ -8,6 +8,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        setSupportActionBar(findViewById(R.id.toolbar)) //Definindo a Toolbar que eu adicionei ao layout como sendo a nova ActionBar (Aquela Barra que fica na parte superior da tela)
 
         spinner_recorrencia = findViewById(R.id.spinner_recorrencia)
         editText_dataVencimento = findViewById(R.id.editText_dataVencimento)
@@ -187,23 +189,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    // Request code for selecting a PDF document.
-    //val PICK_PDF_FILE = 2
-
-    /*
-    fun openFile(pickerInitialUri: Uri) {
-        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-            addCategory(Intent.CATEGORY_OPENABLE)
-            type = "application/pdf"
-
-            // Optionally, specify a URI for the file that should appear in the
-            // system file picker when it loads.
-            putExtra(DocumentsContract.EXTRA_INITIAL_URI, pickerInitialUri)
+    //Função que executa o que for clicado nos items do menu flutuante da Action Bar
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.itemMenu_DespesaCartao -> {
+            // User chose the "Settings" item, show the app settings UI...
+            true
         }
 
-        startActivityForResult(intent, PICK_PDF_FILE)
+        R.id.itemMenu_GerenciarCategorias -> {
+            // User chose the "Favorite" action, mark the current item
+            // as a favorite...
+            true
+        }
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
     }
-    */
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_flutuante_actionbar, menu)
+        return true
+    }
 
 }
