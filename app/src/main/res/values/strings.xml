@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Controlando Meu Dinheiro</string>
+    <string name="descricao">Descrição</string>
+    <string name="recorrencia">Recorrencia</string>
+    <string name="zeroReais">R$ 0,00</string>
+    <string name="valor">Valor</string>
+    <string name="data_de_vencimento">Data de Vencimento</string>
+    <string name="situacao">Situação</string>
+    <string name="categoria">Categoria</string>
+    <string name="subcategoria">Subcategoria</string>
+    <string name="conta">Conta</string>
+    <string name="pendente">Pendente</string>
+    <string name="efetivada">Efetivada</string>
+    <string name="salvar_e_continuar">Salvar e continuar</string>
+    <string name="data_de_lancamento">Data de Lançamento</string>
+    <string name="horario">horario</string>
+    <string name="data_de_pagamento">Data de Pagamento</string>
+    <string name="legenda_observacoes">Você também pode colocar hashtags aqui (ex: #almoço) e usar isso nas pesquisas como listagens e extrato.</string>
+
+    <string-array name="stringArray_recorrencia">
+        <item>Nenhuma</item>
+        <item>Parcelada</item>
+        <item>Fixa Mensal</item>
+    </string-array>
+    <string-array name="stringArray_categoria">
+        <item>Alimentação</item>
+        <item>Sophia</item>
+        <item>Doações, Presentes e Emprestimos</item>
+        <item>Casa</item>
+    </string-array>
+    <string-array name="stringArray_subcategoria">
+        <item>Bebidas</item>
+        <item>Biscoitos</item>
+        <item>Carnes</item>
+        <item>Extratos &amp; Molhos</item>
+        <item>Folhas</item>
+        <item>Frutas</item>
+    </string-array>
+    <string-array name="stringArray_conta">
+        <item>Minha Conta Corrente</item>
+        <item>Minha Poupança</item>
+    </string-array>
+
+</resources>
