@@ -6,13 +6,11 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
 import com.damascenoapps.controlandomeudinheiro.R
 import com.damascenoapps.controlandomeudinheiro.fragments.DatePickerFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -38,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private var imageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar)) //Definindo a Toolbar que eu adicionei ao layout como sendo a nova ActionBar (Aquela Barra que fica na parte superior da tela)
@@ -58,9 +57,9 @@ class MainActivity : AppCompatActivity() {
 
         //spinner_recorrencia - Código que faz o spinner funcionar
         ArrayAdapter.createFromResource(
-            this,
-            R.array.stringArray_recorrencia,
-            android.R.layout.simple_spinner_item
+                this,
+                R.array.stringArray_recorrencia,
+                android.R.layout.simple_spinner_item
         ).also { adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 spinner_recorrencia.adapter = adapter
         }
@@ -72,27 +71,27 @@ class MainActivity : AppCompatActivity() {
 
         //spinner_categoria - Código que faz o spinner funcionar
         ArrayAdapter.createFromResource(
-            this,
-            R.array.stringArray_categoria,
-            android.R.layout.simple_spinner_item
+                this,
+                R.array.stringArray_categoria,
+                android.R.layout.simple_spinner_item
         ).also { adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner_categoria.adapter = adapter
         }
 
         //spinner_subcategoria - Código que faz o spinner funcionar
         ArrayAdapter.createFromResource(
-            this,
-            R.array.stringArray_subcategoria,
-            android.R.layout.simple_spinner_item
+                this,
+                R.array.stringArray_subcategoria,
+                android.R.layout.simple_spinner_item
         ).also { adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner_subcategoria.adapter = adapter
         }
 
         //spinner_conta - Código que faz o spinner conta funcionar
         ArrayAdapter.createFromResource(
-            this,
-            R.array.stringArray_conta,
-            android.R.layout.simple_spinner_item
+                this,
+                R.array.stringArray_conta,
+                android.R.layout.simple_spinner_item
         ).also { adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner_conta.adapter = adapter
         }
@@ -111,11 +110,11 @@ class MainActivity : AppCompatActivity() {
                  editText_horario.setText(SimpleDateFormat("HH:mm").format(cal.time))
              }
             TimePickerDialog(
-                this,
-                timeSetListener,
-                cal.get(Calendar.HOUR_OF_DAY),
-                cal.get(Calendar.MINUTE),
-                true
+                    this,
+                    timeSetListener,
+                    cal.get(Calendar.HOUR_OF_DAY),
+                    cal.get(Calendar.MINUTE),
+                    true
             ).show()
         }
 
@@ -191,6 +190,7 @@ class MainActivity : AppCompatActivity() {
 
     //Função que executa o que for clicado nos items do menu flutuante da Action Bar
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+
         R.id.itemMenu_DespesaCartao -> {
             // User chose the "Settings" item, show the app settings UI...
             true
