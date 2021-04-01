@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15433491447",
+    "project_id": "controlando-meu-dinheiro",
+    "storage_bucket": "controlando-meu-dinheiro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15433491447:android:90ee5316b16dd3cca004f2",
+        "android_client_info": {
+          "package_name": "com.damascenoapps.controlandomeudinheiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15433491447-o0e20q68vcaj84ioqeisk3pftjevqh4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5DsTjDsLMvwowh31Z4XUqnYvta8FRLn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15433491447-o0e20q68vcaj84ioqeisk3pftjevqh4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
