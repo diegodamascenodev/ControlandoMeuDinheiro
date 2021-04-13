@@ -7,12 +7,16 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.damascenoapps.controlandomeudinheiro.R
 import com.damascenoapps.controlandomeudinheiro.fragments.DatePickerFragment
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import io.perfmark.Tag
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -202,6 +206,11 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        R.id.itemMenu_salvar -> {
+            salvar()
+            true
+        }
+
         else -> {
             // If we got here, the user's action was not recognized.
             // Invoke the superclass to handle it.
@@ -213,5 +222,25 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_flutuante_actionbar, menu)
         return true
     }
+
+    val db = Firebase.firestore
+
+
+    fun salvar(){
+        val user = hashMapOf(
+                "first" to "Ada",
+                "last" to "LoveLace",
+                "born" to 1815
+        )
+        db.collection("users")
+            .add(user)
+            .addOnSuccessListener { documentReference ->
+                Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener{ e ->
+                Log.w("TAG", "Error adding document", e)
+            }
+    }
+
 
 }
